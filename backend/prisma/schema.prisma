@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+model Backpack {
+  id               Int     @id @default(autoincrement())
+  name             String  @db.VarChar(255)
+  description      String  @db.Text
+  price            Decimal
+  capacity         Int
+  material         String  @db.VarChar(1024)
+  imageUrl         String? @map("image_url") @db.VarChar(1024)
+  type             String  @db.VarChar(100)
+  quantity         Int
+  suspendedInStore Boolean @map("suspended_in_store")
+  brand            Brand   @relation(fields: [brandId], references: [id])
+  brandId          Int
+
+  @@map("backpack")
+}
+
+model Brand {
+  id             Int        @id @default(autoincrement())
+  name           String     @db.VarChar(255)
+  headquarter    String     @db.VarChar(255)
+  yearOfCreation Int
+  Backpack       Backpack[]
+
+  @@map("brand")
+}

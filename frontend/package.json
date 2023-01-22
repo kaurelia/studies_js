@@ -1,0 +1,13 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "serve -s . -l 3000"
+  },
+  "dependencies": {
+    "server": "^1.0.38",
+    "yarn": "^1.22.19"
+  }
+}

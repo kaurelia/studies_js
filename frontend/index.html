@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Projekt</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="index.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <form>
+      <label for="backpack-input">Specify id of backpack</label>
+      <input
+        type="number"
+        name="backpack-input"
+        id="backpack-input"
+        placeholder="backpack id"
+      />
+      <div class="button" id="get-specific-backpack">Get Specific Backpack</div>
+      <div id="backpack-wrapper" class="wrapper"></div>
+    </form>
+    <form>
+      <label for="brand-input">Specify id of brand</label>
+      <input
+        type="number"
+        name="brand-input"
+        id="brand-input"
+        placeholder="brand id"
+      />
+      <div class="button" id="get-specific-brand">Get Specific Brand</div>
+      <div id="brand-wrapper" class="wrapper"></div>
+    </form>
+    <div class="button" id="get-all-backpacks">Get All Backpacks</div>
+    <div id="all-backpacks-wrapper" class="wrapper"></div>
+    <div class="button" id="get-all-brands">Get All Brands</div>
+    <div id="all-brands-wrapper" class="wrapper"></div>
+    <div class="spacer"></div>
+  </body>
+</html>

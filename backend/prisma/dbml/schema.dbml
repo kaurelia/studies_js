@@ -1,0 +1,28 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table backpack {
+  id Int [pk, increment]
+  name String [not null]
+  description String [not null]
+  price Decimal [not null]
+  capacity Int [not null]
+  material String [not null]
+  imageUrl String
+  type String [not null]
+  quantity Int [not null]
+  suspendedInStore Boolean [not null]
+  brand brand [not null]
+  brandId Int [not null]
+}
+
+Table brand {
+  id Int [pk, increment]
+  name String [not null]
+  headquarter String [not null]
+  yearOfCreation Int [not null]
+  Backpack backpack [not null]
+}
+
+Ref: backpack.brandId > brand.id
